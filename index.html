@@ -1,0 +1,7 @@
+<span id="span"></span>
+<script>
+var rawLength = location.search.substring(1);
+var length = rawLength === '' || isNaN(rawLength) ? 16 : parseInt(rawLength);
+var random = Array(length).fill("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz").map(x => x[Math.floor(Math.random() * x.length)]).join('');
+document.getElementById("span").appendChild(document.createTextNode(random));
+</script>
